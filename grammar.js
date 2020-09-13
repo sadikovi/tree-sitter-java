@@ -325,7 +325,7 @@ module.exports = grammar({
 
     method_invocation: $ => seq(
       choice(
-        field('name', choice($.identifier, $._reserved_identifier)),
+        field('name', $.method_invocation_name),
         seq(
           field('object', choice($._primary, $.super)),
           '.',
@@ -334,11 +334,13 @@ module.exports = grammar({
             '.'
           )),
           field('type_arguments', optional($.type_arguments)),
-          field('name', choice($.identifier, $._reserved_identifier)),
+          field('name', $.method_invocation_name),
         )
       ),
       field('arguments', $.argument_list)
     ),
+
+    method_invocation_name: $ => choice($.identifier, $._reserved_identifier),
 
     argument_list: $ => seq('(', commaSep($._expression), ')'),
 

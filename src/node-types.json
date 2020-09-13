@@ -2383,7 +2383,7 @@
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "method_invocation_name",
             "named": true
           }
         ]
@@ -2419,6 +2419,21 @@
       "types": [
         {
           "type": "super",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "method_invocation_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
           "named": true
         }
       ]

@@ -2632,17 +2632,8 @@
               "type": "FIELD",
               "name": "name",
               "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "identifier"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "_reserved_identifier"
-                  }
-                ]
+                "type": "SYMBOL",
+                "name": "method_invocation_name"
               }
             },
             {
@@ -2710,17 +2701,8 @@
                   "type": "FIELD",
                   "name": "name",
                   "content": {
-                    "type": "CHOICE",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "identifier"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "_reserved_identifier"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "method_invocation_name"
                   }
                 }
               ]
@@ -2734,6 +2716,19 @@
             "type": "SYMBOL",
             "name": "argument_list"
           }
+        }
+      ]
+    },
+    "method_invocation_name": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_reserved_identifier"
         }
       ]
     },
