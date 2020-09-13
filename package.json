@@ -1,7 +1,7 @@
 {
-  "name": "tree-sitter-java",
-  "version": "0.16.0",
-  "description": "Java grammar for tree-sitter",
+  "name": "tree-sitter-java-dev",
+  "version": "0.16.0-dev0",
+  "description": "Java grammar for tree-sitter (dev)",
   "main": "index.js",
   "keywords": [
     "parser",
@@ -10,9 +10,9 @@
   "author": "Ayman Nadeem",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tree-sitter/tree-sitter-java/issues"
+    "url": "https://github.com/sadikovi/tree-sitter-java/issues"
   },
-  "homepage": "https://github.com/tree-sitter/tree-sitter-java#readme",
+  "homepage": "https://github.com/sadikovi/tree-sitter-java#readme",
   "dependencies": {
     "nan": "^2.12.1"
   },
@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tree-sitter/tree-sitter-java.git"
+    "url": "git+https://github.com/sadikovi/tree-sitter-java.git"
   },
   "tree-sitter": [
     {
