@@ -282,3 +282,16 @@ ascii escapes
   (expression_statement (character_literal))
   (expression_statement (character_literal))
   (expression_statement (character_literal)))
+
+========================
+reserved unused literals
+========================
+
+const;
+goto;
+
+---
+
+(program
+  (expression_statement (reserved_unused_literal))
+  (expression_statement (reserved_unused_literal)))
