@@ -6579,7 +6579,7 @@
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "[a-zA-Z_]\\w*"
+      "value": "[A-Za-z_$][A-Za-z0-9_$]*"
     },
     "comment": {
       "type": "TOKEN",

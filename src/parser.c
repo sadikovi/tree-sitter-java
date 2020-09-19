@@ -2838,7 +2838,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\r' ||
           lookahead == ' ') SKIP(0)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(48);
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (('$' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -2872,7 +2872,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\r' ||
           lookahead == ' ') SKIP(1)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(48);
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (lookahead == '$' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -2905,7 +2906,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\n' ||
           lookahead == '\r' ||
           lookahead == ' ') SKIP(2)
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (lookahead == '$' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -2938,7 +2940,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\n' ||
           lookahead == '\r' ||
           lookahead == ' ') SKIP(3)
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (lookahead == '$' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -2968,7 +2971,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\n' ||
           lookahead == '\r' ||
           lookahead == ' ') SKIP(5)
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (lookahead == '$' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -2991,7 +2995,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\n' ||
           lookahead == '\r' ||
           lookahead == ' ') SKIP(7)
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (lookahead == '$' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -3162,7 +3167,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\r' ||
           lookahead == ' ') SKIP(42)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(48);
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (('$' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -3200,7 +3205,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\r' ||
           lookahead == ' ') SKIP(43)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(48);
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (('$' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -3229,7 +3234,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\r' ||
           lookahead == ' ') SKIP(44)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(48);
-      if (('A' <= lookahead && lookahead <= 'Z') ||
+      if (lookahead == '$' ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
       END_STATE();
@@ -3711,7 +3717,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 145:
       ACCEPT_TOKEN(sym_identifier);
-      if (('0' <= lookahead && lookahead <= '9') ||
+      if (lookahead == '$' ||
+          ('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(145);
